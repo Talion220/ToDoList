@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:hint="@string/description_hint"
+        android:inputType="text"
+        android:text="@string/task_text"/>
+    <RadioGroup
+        android:id="@+id/radioGroupPriority"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonHigh"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:background="#FF5722"
+            android:text="@string/high" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMedium"
+            android:layout_width="144dp"
+            android:layout_height="match_parent"
+            android:background="#FF9800"
+            android:text="@string/medium" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLow"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:background="#FBE203"
+            android:checked="true"
+            android:text="@string/low" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#00BCD4"
+        android:text="@string/add" />
+</LinearLayout>
