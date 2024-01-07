@@ -35,12 +35,14 @@ class AddActivity : AppCompatActivity() {
             GlobalScope.launch(Dispatchers.IO) {
                 taskDao.insertTask(Task(description = description, priority = priority))
 
-                val updatedTaskList = taskDao.getAllTasks()
-
-                withContext(Dispatchers.Main) {
-                    taskAdapter.submitList(updatedTaskList)
-                    taskAdapter.notifyDataSetChanged()
-                }
+//                val updatedTaskList = taskDao.getAllTasks()
+//
+//                withContext(Dispatchers.Main) {
+//                    taskAdapter.notifyDataSetChanged()
+//                    taskAdapter.submitList(updatedTaskList)
+//
+//
+//                }
             }
 
             finish()

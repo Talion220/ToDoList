@@ -80,4 +80,15 @@ class ListActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    override fun onResume() {
+        super.onResume()
+        GlobalScope.launch(Dispatchers.IO) {
+            val tasks = taskDao.getAllTasks()
+
+            withContext(Dispatchers.Main) {
+                adapter.submitList(tasks)
+            }
+        }
+    }
+
 }
