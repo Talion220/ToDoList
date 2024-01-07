@@ -74,6 +74,8 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation ("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
+//    kapt("androidx.room:room-compiler:2.6.1")
+//    compileOnly("com.github.pengrad:jdk9-deps:1.0")
 
     implementation("com.google.dagger:hilt-android:2.40.5")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
