@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/fab"
-        android:layout_marginBottom="-73dp"
+        android:layout_marginBottom="-88dp"
         android:clipToPadding="false"
-        android:padding="16dp"
+
         android:scrollbars="vertical" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

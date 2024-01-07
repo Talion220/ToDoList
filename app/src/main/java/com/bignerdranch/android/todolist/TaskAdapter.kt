@@ -21,9 +21,9 @@ class TaskAdapter : ListAdapter<Task, TaskAdapter.TaskViewHolder>(TaskDiffCallba
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = getItem(position)
         when (task.priority) {
-            1 -> holder.itemView.setBackgroundResource(R.drawable.priority_background_low)
+            3 -> holder.itemView.setBackgroundResource(R.drawable.priority_background_low)
             2 -> holder.itemView.setBackgroundResource(R.drawable.priority_background_medium)
-            3 -> holder.itemView.setBackgroundResource(R.drawable.priority_background_high)
+            1 -> holder.itemView.setBackgroundResource(R.drawable.priority_background_high)
         }
         holder.bind(task)
     }
