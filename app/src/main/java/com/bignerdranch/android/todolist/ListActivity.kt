@@ -13,6 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ListActivity : AppCompatActivity() {
 
@@ -60,6 +61,13 @@ class ListActivity : AppCompatActivity() {
                 GlobalScope.launch(Dispatchers.IO) {
                     val taskIdToDelete = taskToDelete.id
                     taskDao.deleteTask(taskIdToDelete)
+
+                    val updatedTaskList = taskDao.getAllTasks()
+
+                    // Передаем новый список в адаптер и уведомляем RecyclerView
+                    withContext(Dispatchers.Main) {
+                        adapter.submitList(updatedTaskList)
+                    }
                 }
             }
         })
