@@ -64,7 +64,6 @@ class ListActivity : AppCompatActivity() {
 
                     val updatedTaskList = taskDao.getAllTasks()
 
-                    // Передаем новый список в адаптер и уведомляем RecyclerView
                     withContext(Dispatchers.Main) {
                         adapter.submitList(updatedTaskList)
                     }
