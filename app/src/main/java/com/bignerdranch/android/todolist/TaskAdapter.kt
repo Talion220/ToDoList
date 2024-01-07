@@ -26,7 +26,7 @@ class TaskAdapter : ListAdapter<Task, TaskAdapter.TaskViewHolder>(TaskDiffCallba
     class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(task: Task) {
             binding.task = task
-            // Дополнительная настройка для отображения других данных о задаче
+//            binding.taskPriorityTextView.text = task.priority.toString()
             binding.executePendingBindings()
         }
     }
