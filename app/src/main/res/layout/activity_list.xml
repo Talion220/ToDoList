@@ -11,9 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/fab"
-        android:padding="16dp"
+        android:layout_marginBottom="-73dp"
         android:clipToPadding="false"
+        android:padding="16dp"
         android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/taskDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -29,4 +36,5 @@
         android:contentDescription="@string/add_task"
         android:src="@drawable/circle"
         app:backgroundTint="#FFFFFF" />
+
 </RelativeLayout>
