@@ -1,7 +1,5 @@
 package com.bignerdranch.android.todolist
 
-import Task
-import TaskDao
 import androidx.room.Database
 import androidx.room.RoomDatabase
 
