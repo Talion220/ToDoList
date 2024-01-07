@@ -25,21 +25,21 @@
             android:id="@+id/radioButtonHigh"
             android:layout_width="123dp"
             android:layout_height="match_parent"
-            android:background="#FF5722"
+            android:background="#812C11"
             android:text="@string/high" />
 
         <RadioButton
             android:id="@+id/radioButtonMedium"
             android:layout_width="144dp"
             android:layout_height="match_parent"
-            android:background="#FF9800"
+            android:background="#925904"
             android:text="@string/medium" />
 
         <RadioButton
             android:id="@+id/radioButtonLow"
             android:layout_width="112dp"
             android:layout_height="match_parent"
-            android:background="#FBE203"
+            android:background="#70660C"
             android:checked="true"
             android:text="@string/low" />
     </RadioGroup>
@@ -49,6 +49,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#00BCD4"
+        android:background="#005560"
         android:text="@string/add" />
 </LinearLayout>

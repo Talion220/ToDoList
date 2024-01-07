@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@{String.valueOf(task.priority)}"
-            android:textSize="24sp" />
+            android:textSize="24sp"/>
 
     </LinearLayout>
 </layout>
