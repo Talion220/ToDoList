@@ -16,7 +16,7 @@ class AddActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddBinding
     private lateinit var taskDao: TaskDao
-    private lateinit var taskAdapter: TaskAdapter // Объявляем адаптер
+    private lateinit var taskAdapter: TaskAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddBinding.inflate(layoutInflater)
@@ -34,10 +34,9 @@ class AddActivity : AppCompatActivity() {
 
             GlobalScope.launch(Dispatchers.IO) {
                 taskDao.insertTask(Task(description = description, priority = priority))
-                // Получаем новый список задач после вставки
+
                 val updatedTaskList = taskDao.getAllTasks()
 
-                // Передаем новый список в адаптер и уведомляем RecyclerView
                 withContext(Dispatchers.Main) {
                     taskAdapter.submitList(updatedTaskList)
                     taskAdapter.notifyDataSetChanged()
